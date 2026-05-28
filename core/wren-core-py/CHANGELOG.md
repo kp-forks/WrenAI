@@ -1,5 +1,64 @@
 # Changelog
 
+## [0.7.0](https://github.com/kp-forks/WrenAI/compare/wren-core-py-v0.6.0...wren-core-py-v0.7.0) (2026-05-28)
+
+
+### Features
+
+* add MDL layout versioning and dialect field on Model and View ([#1556](https://github.com/kp-forks/WrenAI/issues/1556)) ([db2f0e4](https://github.com/kp-forks/WrenAI/commit/db2f0e4689b3565989288489c57a3e5a55a2f3ef))
+* add wren-core-wasm module with browser WASM support ([#1568](https://github.com/kp-forks/WrenAI/issues/1568)) ([5165a20](https://github.com/kp-forks/WrenAI/commit/5165a2099aeb7c9d7fef4ec78771e9efcb58db1c))
+* **core:** apply default nulls last policy for ordering ([#1262](https://github.com/kp-forks/WrenAI/issues/1262)) ([2477f43](https://github.com/kp-forks/WrenAI/commit/2477f43c3f50f10ed0b62e5e14240f29e4edccbc))
+* **core:** bump DataFusion to 49.0.1 ([#1293](https://github.com/kp-forks/WrenAI/issues/1293)) ([ee73ea2](https://github.com/kp-forks/WrenAI/commit/ee73ea2d4606d823daf03ac6055ef793fc0e10b7))
+* **core:** enhance the error message for CLAC failure ([#1250](https://github.com/kp-forks/WrenAI/issues/1250)) ([f5755b9](https://github.com/kp-forks/WrenAI/commit/f5755b9b48ad7565a75ce310087ebae19aed9290))
+* **core:** implement column-level access control for the model ([#1211](https://github.com/kp-forks/WrenAI/issues/1211)) ([d3a1a19](https://github.com/kp-forks/WrenAI/commit/d3a1a19918e6ac4f891cf728d31d4b56f7ce559e))
+* **core:** implement the customize type coercion rule for unparsing purpose ([#1318](https://github.com/kp-forks/WrenAI/issues/1318)) ([9b740b7](https://github.com/kp-forks/WrenAI/commit/9b740b7b87c8058b8c5087f361493f0bcdbbccd5))
+* **core:** import wren-engine into core/ ([cc9b67f](https://github.com/kp-forks/WrenAI/commit/cc9b67f593bf94c7418e0abb0ed46aa4a21613c3))
+* **core:** import wren-engine into core/ ([#2209](https://github.com/kp-forks/WrenAI/issues/2209)) ([8b8a1a3](https://github.com/kp-forks/WrenAI/commit/8b8a1a3c5bf2a43d56ea1587782a0d5d853803b2))
+* **core:** introduce dialect-specific function list and refactor BigQuery function lists ([#1366](https://github.com/kp-forks/WrenAI/issues/1366)) ([586156f](https://github.com/kp-forks/WrenAI/commit/586156fde21005e2ac00c92236bbcdb0b3bfa754))
+* **core:** support UNNEST syntax for Snowflake ([#1357](https://github.com/kp-forks/WrenAI/issues/1357)) ([11a49b5](https://github.com/kp-forks/WrenAI/commit/11a49b5f32f6b17afb093b3330983efb8dfb9e24))
+* **ibis:** introduce the api to get the details of specfic function ([#1374](https://github.com/kp-forks/WrenAI/issues/1374)) ([effcd87](https://github.com/kp-forks/WrenAI/commit/effcd87a086a28568ec3318d7fb3af7b5a9e26f3))
+* **mcp-server:** embed MCP server in Docker image with skills and quickstart guide ([#1425](https://github.com/kp-forks/WrenAI/issues/1425)) ([b054331](https://github.com/kp-forks/WrenAI/commit/b054331770f00fdb1582a7035736b7ca2992dc16))
+* **wasm:** full Cube support — validate, translate, PyO3, CLI, WASM, docs ([#2282](https://github.com/kp-forks/WrenAI/issues/2282)) ([026111e](https://github.com/kp-forks/WrenAI/commit/026111e54ec31e7165f9fd79c5c998070e66626c))
+* **wren-core-base:** replace Metric with Cube types and remove deprecated security types ([#1574](https://github.com/kp-forks/WrenAI/issues/1574)) ([72d18a8](https://github.com/kp-forks/WrenAI/commit/72d18a81bbc28a9833a07e19486de16cf59836d0))
+* **wren-core:** add refSql model support ([#1555](https://github.com/kp-forks/WrenAI/issues/1555)) ([815889c](https://github.com/kp-forks/WrenAI/commit/815889c69bdf5dd4dc13d4dd06ae3bfd160b6e73))
+
+
+### Bug Fixes
+
+* **ci:** disable Linux aarch64 wheel build temporarily ([#1503](https://github.com/kp-forks/WrenAI/issues/1503)) ([5724abf](https://github.com/kp-forks/WrenAI/commit/5724abf5117bad43b8f42ab779482e59f759362f))
+* **ci:** include README.md in wren-core-py Docker build context ([#1498](https://github.com/kp-forks/WrenAI/issues/1498)) ([9defc5b](https://github.com/kp-forks/WrenAI/commit/9defc5bd51f63e12474ee8888f14660211326999))
+* **core-py:** avoid to generate duplicate models after extracting manifest ([#1244](https://github.com/kp-forks/WrenAI/issues/1244)) ([24646bd](https://github.com/kp-forks/WrenAI/commit/24646bd77b0c1f083d4391569087cf827d356e58))
+* **core-py:** extract the used tables using the case-sensitive table name ([#1320](https://github.com/kp-forks/WrenAI/issues/1320)) ([761e9d4](https://github.com/kp-forks/WrenAI/commit/761e9d46dfef542f78fcc00c7b2b57bca63b61e6))
+* **core:** disable `ReplaceDistinctWithAggregate` rule ([#1294](https://github.com/kp-forks/WrenAI/issues/1294)) ([3fc6990](https://github.com/kp-forks/WrenAI/commit/3fc6990a005f5cbbc116de8a2e2f28b411f9680f))
+* **core:** disable eliminating sort in subquery ([#1206](https://github.com/kp-forks/WrenAI/issues/1206)) ([1d9ae8d](https://github.com/kp-forks/WrenAI/commit/1d9ae8dca1498aa768a4b4286d6afc44c9b56409))
+* **core:** fix access controls case-insensitive issue and disable fallback for the query with access control ([#1295](https://github.com/kp-forks/WrenAI/issues/1295)) ([4e90f69](https://github.com/kp-forks/WrenAI/commit/4e90f693f00d641c49ca80306ac6627d25eb5849))
+* **core:** fix RLAC for model with an alias ([#1245](https://github.com/kp-forks/WrenAI/issues/1245)) ([aa8520f](https://github.com/kp-forks/WrenAI/commit/aa8520f9b641ad20153b07f9dcaa2253afb705e0))
+* **core:** fix the CLAC and scope analyze issues ([#1304](https://github.com/kp-forks/WrenAI/issues/1304)) ([087cb42](https://github.com/kp-forks/WrenAI/commit/087cb42f55e49caf9b7214b4ac281e1034da5026))
+* **core:** fix the required session properties for CLAC ([#1287](https://github.com/kp-forks/WrenAI/issues/1287)) ([e720258](https://github.com/kp-forks/WrenAI/commit/e720258b112849ff047957d3e72fe28425c6f0c4))
+* **core:** introduce `DATE_DIFF` function ([#1303](https://github.com/kp-forks/WrenAI/issues/1303)) ([2db6f88](https://github.com/kp-forks/WrenAI/commit/2db6f883122550644752a5efe738eb23ab6889bc))
+* **core:** support the Unicode literal for MSSQL ([#1338](https://github.com/kp-forks/WrenAI/issues/1338)) ([f96d11e](https://github.com/kp-forks/WrenAI/commit/f96d11e7271214f9d639879714c4835a45c27213))
+* implement ClickHouse dialect and enhance temporal function mapping ([#1424](https://github.com/kp-forks/WrenAI/issues/1424)) ([c65ab18](https://github.com/kp-forks/WrenAI/commit/c65ab18171e3bb3c58366c06e2dc0e0c6d869bb9))
+
+
+### Dependencies
+
+* **core-py:** bump bytes from 1.10.1 to 1.11.1 in /wren-core-py ([d160a05](https://github.com/kp-forks/WrenAI/commit/d160a05fc6228452c7a549d3fdf8c836458a0bbe))
+* **core-py:** bump cryptography from 0.3.44 to 0.3.47 in /wren-core-py ([a5e711d](https://github.com/kp-forks/WrenAI/commit/a5e711d2cac56f56269567c35ed33fe0f739b51a))
+* **core-py:** bump ruff from 0.12.12 to 0.13.0 in /wren-core-py in the all group ([#1321](https://github.com/kp-forks/WrenAI/issues/1321)) ([402b976](https://github.com/kp-forks/WrenAI/commit/402b9768ab184552ab56e1fc85618031d2134060))
+* **core-py:** bump the all group across 1 directory with 3 updates ([#1313](https://github.com/kp-forks/WrenAI/issues/1313)) ([4c6f696](https://github.com/kp-forks/WrenAI/commit/4c6f6963987701b46467e4db73dd4475bfb5e379))
+* **core-py:** bump the all group in /wren-core-py with 2 updates ([#1194](https://github.com/kp-forks/WrenAI/issues/1194)) ([9f642ab](https://github.com/kp-forks/WrenAI/commit/9f642ab2cc05fea617eda0123a9cf711999805cd))
+* **core-py:** bump the all group in /wren-core-py with 2 updates ([#1210](https://github.com/kp-forks/WrenAI/issues/1210)) ([b79a908](https://github.com/kp-forks/WrenAI/commit/b79a90849084af4a1baea0fc164850bc5b025be2))
+* **core-py:** bump the all group in /wren-core-py with 2 updates ([#1217](https://github.com/kp-forks/WrenAI/issues/1217)) ([c12773e](https://github.com/kp-forks/WrenAI/commit/c12773eccf101c8c326cdbc6e7f22fe2dc618bb9))
+* **core-py:** bump the all group in /wren-core-py with 3 updates ([#1233](https://github.com/kp-forks/WrenAI/issues/1233)) ([2a5eb97](https://github.com/kp-forks/WrenAI/commit/2a5eb97d139d8c295f0e42b6ae4925a2487568d6))
+* **core:** bump the all group across 1 directory with 2 updates ([#1310](https://github.com/kp-forks/WrenAI/issues/1310)) ([d3f772a](https://github.com/kp-forks/WrenAI/commit/d3f772adc2b182aa8f184ba8b42fe3decfa700cb))
+* **core:** bump the all group across 1 directory with 4 updates ([#1307](https://github.com/kp-forks/WrenAI/issues/1307)) ([2418778](https://github.com/kp-forks/WrenAI/commit/2418778161a9fe65a8eb31d9c471a0c166f57f2f))
+* **wren-core-py:** bump lz4_flex 0.11.5 -&gt; 0.11.6 for security patch ([6912e2a](https://github.com/kp-forks/WrenAI/commit/6912e2a90f3cc741398f3c7c44aecf76fa109647))
+
+
+### Documentation
+
+* add per-module .claude/CLAUDE.md and redirect AGENTS.md ([#1466](https://github.com/kp-forks/WrenAI/issues/1466)) ([d51c198](https://github.com/kp-forks/WrenAI/commit/d51c19829e55e913da2e4956ee1d989beca9a416))
+
 ## [0.6.0](https://github.com/Canner/WrenAI/compare/wren-core-py-v0.5.0...wren-core-py-v0.6.0) (2026-05-15)
 
 

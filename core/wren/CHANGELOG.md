@@ -1,5 +1,75 @@
 # Changelog
 
+## [0.10.0](https://github.com/kp-forks/WrenAI/compare/wren-v0.9.0...wren-v0.10.0) (2026-06-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **wren:** rename PyPI package from wren-engine to wrenai ([#2315](https://github.com/kp-forks/WrenAI/issues/2315))
+
+### Features
+
+* add MDL layout versioning and dialect field on Model and View ([#1556](https://github.com/kp-forks/WrenAI/issues/1556)) ([db2f0e4](https://github.com/kp-forks/WrenAI/commit/db2f0e4689b3565989288489c57a3e5a55a2f3ef))
+* add wren-core-wasm module with browser WASM support ([#1568](https://github.com/kp-forks/WrenAI/issues/1568)) ([5165a20](https://github.com/kp-forks/WrenAI/commit/5165a2099aeb7c9d7fef4ec78771e9efcb58db1c))
+* **context:** bind a connection profile to a project ([#2251](https://github.com/kp-forks/WrenAI/issues/2251)) ([41fbe41](https://github.com/kp-forks/WrenAI/commit/41fbe411fd1f1bb7a4080fbcedc7c886678276d1))
+* **core:** import wren-engine into core/ ([cc9b67f](https://github.com/kp-forks/WrenAI/commit/cc9b67f593bf94c7418e0abb0ed46aa4a21613c3))
+* **core:** import wren-engine into core/ ([#2209](https://github.com/kp-forks/WrenAI/issues/2209)) ([8b8a1a3](https://github.com/kp-forks/WrenAI/commit/8b8a1a3c5bf2a43d56ea1587782a0d5d853803b2))
+* **wasm:** full Cube support — validate, translate, PyO3, CLI, WASM, docs ([#2282](https://github.com/kp-forks/WrenAI/issues/2282)) ([026111e](https://github.com/kp-forks/WrenAI/commit/026111e54ec31e7165f9fd79c5c998070e66626c))
+* **wren-core:** add refSql model support ([#1555](https://github.com/kp-forks/WrenAI/issues/1555)) ([815889c](https://github.com/kp-forks/WrenAI/commit/815889c69bdf5dd4dc13d4dd06ae3bfd160b6e73))
+* **wren-core:** support composite (multi-column) primary keys ([#2345](https://github.com/kp-forks/WrenAI/issues/2345)) ([d33917f](https://github.com/kp-forks/WrenAI/commit/d33917f046f4ac0abddbbce9ce6c9c10b5adb10a))
+* **wren:** .env-driven profile secrets, auto connection validation, and wren-install-guide skill ([#1588](https://github.com/kp-forks/WrenAI/issues/1588)) ([bdd0758](https://github.com/kp-forks/WrenAI/commit/bdd0758e0778d97a187178e60e663944a221ceaa))
+* **wren:** add `wren docs connection-info` CLI command ([#1507](https://github.com/kp-forks/WrenAI/issues/1507)) ([6159d98](https://github.com/kp-forks/WrenAI/commit/6159d98efb0449f5b167815a5018ef28e0e6914e))
+* **wren:** add dbt import workflow ([#2279](https://github.com/kp-forks/WrenAI/issues/2279)) ([0bd16b8](https://github.com/kp-forks/WrenAI/commit/0bd16b8a95c7f599488177f9a56e232c17760e25))
+* **wren:** add LanceDB-backed memory layer for schema and query retrieval ([#1494](https://github.com/kp-forks/WrenAI/issues/1494)) ([d8c1511](https://github.com/kp-forks/WrenAI/commit/d8c1511049725b19541ac57b6106368615b1739e))
+* **wren:** add memory list, forget, dump & load commands ([#1531](https://github.com/kp-forks/WrenAI/issues/1531)) ([8660f58](https://github.com/kp-forks/WrenAI/commit/8660f587cfd13dc7647bdb750482e5c3f5468962))
+* **wren:** add profile management for named connection profiles ([#1509](https://github.com/kp-forks/WrenAI/issues/1509)) ([85ea8bb](https://github.com/kp-forks/WrenAI/commit/85ea8bb5a441957b49bec0bcb340c3aa977460a9))
+* **wren:** add standalone wren Python SDK package ([#1471](https://github.com/kp-forks/WrenAI/issues/1471)) ([5bc9893](https://github.com/kp-forks/WrenAI/commit/5bc98938b4ebb867f19e4b2e28dce89e272efdd6))
+* **wren:** build MDL manifests from OSI semantic models ([#2322](https://github.com/kp-forks/WrenAI/issues/2322)) ([983cf8b](https://github.com/kp-forks/WrenAI/commit/983cf8bff589b5028b611bcb1ef89834990f9517))
+* **wren:** CLI 0.2.0 — context management, profiles, strict mode & memory ([#1522](https://github.com/kp-forks/WrenAI/issues/1522)) ([b31a1c1](https://github.com/kp-forks/WrenAI/commit/b31a1c191fe7a9893538376a75fe142558c08dcd))
+* **wren:** CTE-based SQL planning with per-model expansion ([#1479](https://github.com/kp-forks/WrenAI/issues/1479)) ([d70f789](https://github.com/kp-forks/WrenAI/commit/d70f789bb99a7786d7281552b163fa324e318463))
+* **wren:** extend standalone CLI with MySQL support and auto-discovery ([#1476](https://github.com/kp-forks/WrenAI/issues/1476)) ([c7e7133](https://github.com/kp-forks/WrenAI/commit/c7e7133d659986d914b6346d1d4fc2c1b4f0822a))
+* **wren:** GenBI app build & deploy — semantic layer → shareable web app ([#2348](https://github.com/kp-forks/WrenAI/issues/2348)) ([67257bf](https://github.com/kp-forks/WrenAI/commit/67257bf2a867df8271c52e0aa352e9b4c3ae155e))
+* **wren:** generate AGENTS.md during `wren context init` ([#1526](https://github.com/kp-forks/WrenAI/issues/1526)) ([9990bc8](https://github.com/kp-forks/WrenAI/commit/9990bc866859305a3fe183835942e4a0ea0252cd))
+* **wren:** preserve SELECT * in CTE rewriter ([#1536](https://github.com/kp-forks/WrenAI/issues/1536)) ([0afaef7](https://github.com/kp-forks/WrenAI/commit/0afaef737292189d36a59fab61728d9ca6d2ad35))
+* **wren:** query MDL views in the SDK rewriter and strict mode ([#2334](https://github.com/kp-forks/WrenAI/issues/2334)) ([731c9c0](https://github.com/kp-forks/WrenAI/commit/731c9c0d92e665254afb2eff129f9e061a932fd2))
+* **wren:** serve agent skills and reference docs from the CLI ([#2329](https://github.com/kp-forks/WrenAI/issues/2329)) ([cbd10cd](https://github.com/kp-forks/WrenAI/commit/cbd10cd0ae31876e9dc8a0d113c482b29b6f5ad2))
+
+
+### Bug Fixes
+
+* ensure UTF-8 encoding for YAML file operations on Windows ([#2357](https://github.com/kp-forks/WrenAI/issues/2357)) ([322bd79](https://github.com/kp-forks/WrenAI/commit/322bd798da9e50945af6bc2132622b908073ce7c))
+* **memory:** avoid identifier columns in aggregation seed queries ([#2358](https://github.com/kp-forks/WrenAI/issues/2358)) ([d5e7879](https://github.com/kp-forks/WrenAI/commit/d5e78790b95fe188e5e208cc7b794bdf550a44e8))
+* **oracle:** replace ibis[oracle] with native oracledb cursor connector ([#1495](https://github.com/kp-forks/WrenAI/issues/1495)) ([a230488](https://github.com/kp-forks/WrenAI/commit/a2304880e41bcb826ceb69bf8173caca3f39226e))
+* **wren:** address CodeRabbit review feedback ([a28058d](https://github.com/kp-forks/WrenAI/commit/a28058d4bb2ba958dd329c0348192bfebaf1d835))
+* **wren:** fix CLI 0.2.0 docs — description placement, install extras, CLI flags ([#1523](https://github.com/kp-forks/WrenAI/issues/1523)) ([72c4917](https://github.com/kp-forks/WrenAI/commit/72c491750254dc9d30c64c419b38b2caa28bbb7f))
+* **wren:** honor SQL identifier case across policy, extract, and CTE rewriter ([#2310](https://github.com/kp-forks/WrenAI/issues/2310)) ([9b5fe22](https://github.com/kp-forks/WrenAI/commit/9b5fe22ee35209ec23ec3bd4fe2b04133407a8bc))
+* **wren:** load cubes from folder-per-entity layout ([#2350](https://github.com/kp-forks/WrenAI/issues/2350)) ([6f2542e](https://github.com/kp-forks/WrenAI/commit/6f2542e117cd4d7b0631745cd400cbf3f5a948d7))
+* **wren:** support Databricks catalog ([#2340](https://github.com/kp-forks/WrenAI/issues/2340)) ([5e58ef6](https://github.com/kp-forks/WrenAI/commit/5e58ef633fe3e657f99e512a3fdd33b61d03dbdd))
+* **wren:** suppress model-loading noise and improve memory CLI error message ([#1529](https://github.com/kp-forks/WrenAI/issues/1529)) ([1135c0c](https://github.com/kp-forks/WrenAI/commit/1135c0c333f6b1a08c84afa29c8d8d7ccead5cbb))
+
+
+### Performance Improvements
+
+* **cli:** use find_spec instead of eager import to detect memory extra ([#2352](https://github.com/kp-forks/WrenAI/issues/2352)) ([81d15fa](https://github.com/kp-forks/WrenAI/commit/81d15faa3cadc7c5bfeb716f1a241e16cac25c04))
+
+
+### Dependencies
+
+* clear 5 high-severity Dependabot alerts on main ([#2330](https://github.com/kp-forks/WrenAI/issues/2330)) ([cee71e6](https://github.com/kp-forks/WrenAI/commit/cee71e6444025599d0949b8761e9fdf23abf2c04))
+* **wren:** bump transitive deps for security patches ([d064db6](https://github.com/kp-forks/WrenAI/commit/d064db69ef7319c558c3fc29beedde16c17a921f))
+
+
+### Documentation
+
+* **wren:** document macOS memory first-run scan ([#2354](https://github.com/kp-forks/WrenAI/issues/2354)) ([40b1a97](https://github.com/kp-forks/WrenAI/commit/40b1a97caadd95dd5273519916c98578a210edda))
+* **wren:** fix cube quickstart and align YAML/CLI examples with implementation ([#2359](https://github.com/kp-forks/WrenAI/issues/2359)) ([be69509](https://github.com/kp-forks/WrenAI/commit/be69509f06506ad89f299af1eaf9025a90ca50c6))
+* **wren:** rebrand README to Wren AI and expand rename migration note ([#2316](https://github.com/kp-forks/WrenAI/issues/2316)) ([f3a00eb](https://github.com/kp-forks/WrenAI/commit/f3a00eb971a27186824954eff64b32f7e290db3c))
+
+
+### Miscellaneous Chores
+
+* **wren:** rename PyPI package from wren-engine to wrenai ([#2315](https://github.com/kp-forks/WrenAI/issues/2315)) ([20cffa9](https://github.com/kp-forks/WrenAI/commit/20cffa904f2d47c048c9247a77687b3fdfe24416))
+
 ## [0.9.0](https://github.com/Canner/WrenAI/compare/wren-v0.8.1...wren-v0.9.0) (2026-06-04)
 
 

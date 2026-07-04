@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/kp-forks/WrenAI/compare/wren-pydantic-v0.2.0...wren-pydantic-v0.3.0) (2026-07-04)
+
+
+### Features
+
+* **sdk:** add wren-pydantic package for Pydantic AI integration ([#2255](https://github.com/kp-forks/WrenAI/issues/2255)) ([ff6ae50](https://github.com/kp-forks/WrenAI/commit/ff6ae50a0c956d9a7b29218fc0f27547fa4abfa6))
+
+
+### Bug Fixes
+
+* finish wren-engine → wrenai rename cleanup ([#2425](https://github.com/kp-forks/WrenAI/issues/2425)) ([0733d37](https://github.com/kp-forks/WrenAI/commit/0733d379e15f041235bd7ff7449ecc421834a7f4))
+
 ## [0.2.0](https://github.com/Canner/WrenAI/compare/wren-pydantic-v0.1.0...wren-pydantic-v0.2.0) (2026-05-14)
 
 
